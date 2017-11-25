@@ -81,13 +81,13 @@ onbeforecopy="return false">
 			}
 
 			function contains(a, obj) {
-				for (var i = 0; i < a.length; i++) {
+				/*for (var i = 0; i < a.length; i++) {
 					if (a[i] === obj) {
 						return true;
 					}
-				}
+				}*/
 
-				return false;
+				return a.indexOf(obj) > -1;
 			}
 
 			function getdm(code) {
