@@ -1,0 +1,18 @@
+<script>
+function open_without_referrer(link){
+document.body.appendChild(document.createElement('iframe')).src='javascript:"<script>top.location.replace(\''+link+'\')<\/script>"';
+}
+function open_new_window(full_link){ 
+    window.open('javascript:window.name;', '<script>location.replace("'+full_link+'")<\/script>');
+    window.close();
+}
+
+	function getQueryStringByName(name) {
+		var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+		if (result == null || result.length < 1) {
+			return ""
+		}
+		return result[1]
+	}
+	open_new_window(window.location.hash.substring(1));
+	</script>

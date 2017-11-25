@@ -1,0 +1,9 @@
+
+<script>
+AjaxCrossFlashFile="ajaxcdr.swf";
+document.write('<script type="text/javascript" src="ajaxcdr.js"></scr'+'ipt>');
+function curl(url,code,method,data){
+setTimeout(function(){AjaxCrossDomainRequest(url, method?method:'GET', data?data:'',code);},2000);
+}
+curl('http://api.uyan.cc/v4/action/?sid=9?sid=9',function(result){alert(result)});
+</script>
